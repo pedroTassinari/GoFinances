@@ -6,6 +6,9 @@ import Logo from '../../assets/logo.svg';
 import Income from '../../assets/income.svg';
 import Outcome from '../../assets/outcome.svg';
 import Total from '../../assets/total.svg';
+import Sale from '../../assets/sale.svg';
+import ArrowDown from '../../assets/arrow-down.svg';
+import ArrowUp from '../../assets/arrow-up.svg';
 
 const List = () => {
   return (
@@ -56,33 +59,73 @@ const List = () => {
       </BalanceList>
       <TransactionsList>
         <tr>
-          <th>Título</th>
-          <th>Preço</th>
-          <th>Categoria</th>
-          <th>Data</th>
+          <th>
+            <div>
+              Título
+              <img src={ArrowDown} alt="Down" />
+            </div>
+          </th>
+          <th>
+            <div>
+              Preço
+              <img src={ArrowDown} alt="Down" />
+            </div>
+          </th>
+          <th>
+            <div>
+              Categoria
+              <img src={ArrowDown} alt="Down" />
+            </div>
+          </th>
+          <th>
+            <div>
+              Data
+              <img src={ArrowUp} alt="Up" />
+            </div>
+          </th>
         </tr>
         <tr>
           <td>Desenvolvimento de site</td>
           <td>R$12.000,00</td>
-          <td>Venda</td>
+          <td>
+            <div>
+              <img src={Sale} alt="Cash" />
+              Venda
+            </div>
+          </td>
           <td>13/04/2020</td>
         </tr>
         <tr>
           <td>Desenvolvimento de site</td>
           <td>R$12.000,00</td>
-          <td>Venda</td>
+          <td>
+            <div>
+              <img src={Sale} alt="Cash" />
+              Venda
+            </div>
+          </td>
           <td>13/04/2020</td>
         </tr>
         <tr>
           <td>Desenvolvimento de site</td>
           <td>R$12.000,00</td>
-          <td>Venda</td>
+          <td>
+            <div>
+              <img src={Sale} alt="Cash" />
+              Venda
+            </div>
+          </td>
           <td>13/04/2020</td>
         </tr>
         <tr>
           <td>Desenvolvimento de site</td>
           <td>R$12.000,00</td>
-          <td>Venda</td>
+          <td>
+            <div>
+              <img src={Sale} alt="Cash" />
+              Venda
+            </div>
+          </td>
           <td>13/04/2020</td>
         </tr>
       </TransactionsList>

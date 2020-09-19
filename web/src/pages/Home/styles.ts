@@ -95,10 +95,70 @@ export const BalanceList = styled.nav`
       }
 
       &:first-child {
-        margin-left: 12.5vw;
+        margin-left: 12vw;
       }
     }
   }
 `;
 
-export const TransactionsList = styled.table``;
+export const TransactionsList = styled.table`
+  width: 76.25vw;
+  height: 37.5vh;
+  margin-left: 12vw;
+  margin-top: 5vh;
+  border-collapse: separate;
+  border-spacing: 0 2vh;
+
+  tr {
+    background: #ffffff;
+    height: 7.5vh;
+
+    th {
+      font-family: Poppins;
+      font-size: 20px;
+      font-weight: normal;
+      color: #969cb3;
+      text-align: unset;
+      padding-left: 2.5vw;
+
+      div {
+        display: flex;
+
+        img {
+          margin-left: 0.75vw;
+        }
+      }
+    }
+
+    td {
+      font-family: Poppins;
+      font-weight: normal;
+      padding-left: 2.5vw;
+      font-size: 20px;
+
+      &:first-child {
+        border: 1px solid #ffffff;
+        border-radius: 5px 0 0 5px;
+      }
+
+      &:last-child {
+        border: 1px solid #ffffff;
+        border-radius: 0 5px 5px 0;
+        color: #969cb3;
+      }
+
+      div {
+        display: flex;
+        color: #969cb3;
+
+        img {
+          margin-right: 0.75vw;
+        }
+      }
+    }
+
+    &:first-child {
+      background: #e5e5e5;
+    }
+  }
+`;
