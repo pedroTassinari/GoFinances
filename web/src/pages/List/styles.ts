@@ -100,3 +100,5 @@ export const BalanceList = styled.nav`
     }
   }
 `;
+
+export const TransactionsList = styled.table``;

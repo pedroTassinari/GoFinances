@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-import { Header, BalanceList } from './styles';
+import { Header, BalanceList, TransactionsList } from './styles';
 import Logo from '../../assets/logo.svg';
 import Income from '../../assets/income.svg';
 import Outcome from '../../assets/outcome.svg';
@@ -54,6 +54,38 @@ const List = () => {
           </li>
         </ul>
       </BalanceList>
+      <TransactionsList>
+        <tr>
+          <th>Título</th>
+          <th>Preço</th>
+          <th>Categoria</th>
+          <th>Data</th>
+        </tr>
+        <tr>
+          <td>Desenvolvimento de site</td>
+          <td>R$12.000,00</td>
+          <td>Venda</td>
+          <td>13/04/2020</td>
+        </tr>
+        <tr>
+          <td>Desenvolvimento de site</td>
+          <td>R$12.000,00</td>
+          <td>Venda</td>
+          <td>13/04/2020</td>
+        </tr>
+        <tr>
+          <td>Desenvolvimento de site</td>
+          <td>R$12.000,00</td>
+          <td>Venda</td>
+          <td>13/04/2020</td>
+        </tr>
+        <tr>
+          <td>Desenvolvimento de site</td>
+          <td>R$12.000,00</td>
+          <td>Venda</td>
+          <td>13/04/2020</td>
+        </tr>
+      </TransactionsList>
     </>
   );
 };
