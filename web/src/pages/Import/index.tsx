@@ -1,26 +1,16 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Dropzone from 'react-dropzone';
 import { Link } from 'react-router-dom';
 
-import { Header, Tittle, DropzoneContainer } from './styles';
+import { Tittle, DropzoneContainer } from './styles';
+import Header from '../../Components/Header';
 
-import Logo from '../../assets/logo.svg';
 import Alert from '../../assets/alert.svg';
 
 const Import = () => {
   return (
     <>
-      <Header>
-        <img src={Logo} alt="goFinances" />
-        <ul>
-          <li>
-            <Link to="/">Listagem</Link>
-          </li>
-          <li>
-            <Link to="/import">Importar</Link>
-          </li>
-        </ul>
-      </Header>
+      <Header import />
       <Tittle>Importar uma transação</Tittle>
       <DropzoneContainer>
         <Dropzone onDrop={acceptedFiles => console.log(acceptedFiles)}>

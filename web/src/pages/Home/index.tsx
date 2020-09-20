@@ -1,8 +1,9 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 
-import { Header, BalanceList, TransactionsList } from './styles';
-import Logo from '../../assets/logo.svg';
+import { BalanceList, TransactionsList } from './styles';
+import Header from '../../Components/Header';
+
 import Income from '../../assets/income.svg';
 import Outcome from '../../assets/outcome.svg';
 import Total from '../../assets/total.svg';
@@ -13,17 +14,7 @@ import ArrowUp from '../../assets/arrow-up.svg';
 const List = () => {
   return (
     <>
-      <Header>
-        <img src={Logo} alt="goFinances" />
-        <ul>
-          <li>
-            <Link to="/">Listagem</Link>
-          </li>
-          <li>
-            <Link to="/import">Importar</Link>
-          </li>
-        </ul>
-      </Header>
+      <Header import={false} />
       <BalanceList>
         <ul>
           <li>
