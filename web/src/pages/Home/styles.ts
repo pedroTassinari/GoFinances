@@ -55,6 +55,20 @@ export const BalanceList = styled.nav`
       &:first-child {
         margin-left: 12vw;
       }
+
+      &:last-child {
+        div {
+          background: #ff872c;
+        }
+
+        strong {
+          color: #ffffff;
+        }
+
+        h1 {
+          color: #ffffff;
+        }
+      }
     }
   }
 `;
