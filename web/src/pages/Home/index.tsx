@@ -14,7 +14,7 @@ import ArrowUp from '../../assets/arrow-up.svg';
 const List = () => {
   return (
     <>
-      <Header import={false} />
+      <Header small={false} firstLink />
       <BalanceList>
         <ul>
           <li>

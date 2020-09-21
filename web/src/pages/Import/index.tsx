@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import Dropzone from 'react-dropzone';
-import { Link } from 'react-router-dom';
 
 import { Tittle, DropzoneContainer } from './styles';
 import Header from '../../Components/Header';
@@ -10,7 +9,7 @@ import Alert from '../../assets/alert.svg';
 const Import = () => {
   return (
     <>
-      <Header import />
+      <Header small secondLink />
       <Tittle>Importar uma transação</Tittle>
       <DropzoneContainer>
         <Dropzone onDrop={acceptedFiles => console.log(acceptedFiles)}>

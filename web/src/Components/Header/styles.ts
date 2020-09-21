@@ -1,13 +1,16 @@
 import styled, { css } from 'styled-components';
 
 interface HeaderProps {
-  selected: [boolean, boolean];
-  importRoute: boolean;
+  small: boolean;
+}
+
+interface StyledLink {
+  selected?: boolean;
 }
 
 export const Header = styled.header<HeaderProps>`
   width: 100vw;
-  height: 27.5vh;
+  height: ${({ small }) => (small ? '11vh' : '27.5vh')};
   background-color: #5636d3;
 
   display: flex;
@@ -15,12 +18,6 @@ export const Header = styled.header<HeaderProps>`
   flex: 1;
   justify-content: space-between;
   align-items: flex-start;
-
-  ${props =>
-    props.importRoute &&
-    css`
-      height: 11vh;
-    `}
 
   img {
     width: 12.5vw;
@@ -33,28 +30,26 @@ export const Header = styled.header<HeaderProps>`
     margin: 3.75vh 11.25vw 0 0;
     display: flex;
     flex-direction: row;
+  }
+`;
 
-    li {
-      margin-left: 2.5vw;
+export const StyledLink = styled.li<StyledLink>`
+  margin-left: 2.5vw;
 
-      a {
-        text-decoration: none;
-        font-family: Poppins;
-        font-weight: 500;
-        font-size: 20px;
-        color: #ffffff;
-        opacity: 0.8;
+  a {
+    text-decoration: none;
+    font-family: Poppins;
+    font-weight: 500;
+    font-size: 20px;
+    color: #ffffff;
+    opacity: 0.8;
 
-        ${({ selected }) =>
-          selected.map(a => {
-            return (
-              a &&
-              css`
-                color: black;
-              `
-            );
-          })}
-      }
-    }
+    ${({ selected }) =>
+      selected &&
+      css`
+        opacity: 1;
+        border-bottom: 2px solid #ff872c;
+        padding-bottom: 10px;
+      `};
   }
 `;
