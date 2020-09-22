@@ -1,5 +1,9 @@
 import styled from 'styled-components';
 
+interface TransactionProps {
+  type: 'income' | 'outcome';
+}
+
 export const BalanceList = styled.nav`
   width: 100vw;
   height: 16.25vh;
@@ -80,9 +84,45 @@ export const TransactionsList = styled.table`
   margin-top: 5vh;
   border-collapse: separate;
   border-spacing: 0 2vh;
+`;
 
-  tr {
-    background: #ffffff;
+export const TransactionComponent = styled.tr<TransactionProps>`
+  background: #ffffff;
+  height: 7.5vh;
+
+  td {
+    font-family: Poppins;
+    font-weight: normal;
+    padding-left: 2.5vw;
+    font-size: 20px;
+
+    &:first-child {
+      border: 1px solid #ffffff;
+      border-radius: 5px 0 0 5px;
+    }
+
+    &:last-child {
+      border: 1px solid #ffffff;
+      border-radius: 0 5px 5px 0;
+      color: #969cb3;
+    }
+
+    &:nth-child(2) {
+      color: ${({ type }) => (type === 'income' ? '#12A454' : '#E83F5B')};
+    }
+
+    div {
+      display: flex;
+      color: #969cb3;
+
+      img {
+        margin-right: 0.75vw;
+      }
+    }
+  }
+`;
+
+export const TransactionComponentHeader = styled.tr`
     height: 7.5vh;
 
     th {
@@ -100,37 +140,6 @@ export const TransactionsList = styled.table`
           margin-left: 0.75vw;
         }
       }
-    }
-
-    td {
-      font-family: Poppins;
-      font-weight: normal;
-      padding-left: 2.5vw;
-      font-size: 20px;
-
-      &:first-child {
-        border: 1px solid #ffffff;
-        border-radius: 5px 0 0 5px;
-      }
-
-      &:last-child {
-        border: 1px solid #ffffff;
-        border-radius: 0 5px 5px 0;
-        color: #969cb3;
-      }
-
-      div {
-        display: flex;
-        color: #969cb3;
-
-        img {
-          margin-right: 0.75vw;
-        }
-      }
-    }
-
-    &:first-child {
-      background: #e5e5e5;
     }
   }
 `;
