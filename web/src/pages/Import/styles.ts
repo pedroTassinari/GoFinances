@@ -77,3 +77,17 @@ export const DropzoneContainer = styled.div`
     }
   }
 `;
+
+export const AlertContainer = styled.div`
+  width: 100%;
+  height: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+
+  &:first-child {
+    width: 100%;
+    height: 100%;
+  }
+`;
